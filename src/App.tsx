@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const [selectedView, setSelectedView] = useState("info");
+
+  function handleSelected(selected: string) {
+    setSelectedView(selected);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="outer-div-style">
+        <div className="header-style">
+          <h2>React Exercises</h2>
+        </div>
+        <div style={{ display: "flex" }}>
+          <div style={{ flex: 1, padding: 10 }}>
+            <Buttons onSelected={handleSelected} />
+          </div>
+          <div className="exercise-style">
+            {selectedView === "info" ? (
+              <p>All exercises for React day-1</p>
+            ) : null}
+            {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-
-export default App;
+type ButtonProps = {
+  onSelected: (selected: string) => void;
+  btnStyle?: string;
+};
+const Buttons = (props: ButtonProps) => {
+  const { onSelected: handleSelected, btnStyle } = props;
+  return (
+    <>
+      <button className="btn-w100" onClick={() => handleSelected("info")}>
+        Info
+      </button>
+      {/* Add a new button for each of the exercises you complete */}
+      <button className="btn-w100" onClick={() => handleSelected("props1")}>
+        Props demo1
+      </button>
+    </>
+  );
+};

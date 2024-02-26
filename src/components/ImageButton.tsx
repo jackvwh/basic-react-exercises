@@ -2,8 +2,11 @@ import { ImageButtonProps } from "../types";
 
 export default function ImageButton({ image, onClick }: ImageButtonProps) {
   return (
-    <button className="imageButton" onClick={onClick}>
-      <img className="img" src={image} alt="click me" />
-    </button>
+    <img
+      src={image}
+      alt="button"
+      style={{ width: "50px", height: "50px", margin: "5px" }}
+      onClick={onClick}
+    />
   );
 }

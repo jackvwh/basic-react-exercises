@@ -1,6 +1,6 @@
 import { BaseProps } from "../types";
 import { FormEvent, useRef } from "react";
-import { User } from "../data/data";
+import { User, getNextId } from "../data/data";
 
 type UserFormProps = BaseProps & {
   onSubmitUser: (user: User) => void;
@@ -18,6 +18,7 @@ export default function UserForm({ title, onSubmitUser }: UserFormProps) {
     const isActive = activeRef.current?.checked;
 
     const newUser: User = {
+      id: getNextId(),
       name: name || "",
       email: email || "",
       isActive: isActive || false,

@@ -8,3 +8,8 @@ export type ProfileProps = {
   isActive: boolean;
   singleLine?: boolean;
 };
+
+export type ImageButtonProps = {
+  image: string;
+  onClick: () => void;
+};

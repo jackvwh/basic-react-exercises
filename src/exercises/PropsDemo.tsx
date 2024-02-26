@@ -6,11 +6,11 @@ export default function Propsdemo({ title }: BaseProps) {
   const [showHorizontal, setShowHorizontal] = useState(false);
   return (
     <>
-      <h2>{title}</h2>
-      <h3>
+      <h1>{title}</h1>
+      <p>
         Simple exercise to demonstrates how to use props, and props with
         Typescript{" "}
-      </h3>
+      </p>
       Direction:{" "}
       <input
         type="checkbox"

@@ -25,7 +25,7 @@ export default function App() {
             ) : null}
             {selectedView === "props1" ? (
               <div>
-                <Propsdemo title="Props Demo" />
+                <Propsdemo title="Props Demo1" />
               </div>
             ) : null}
             {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}

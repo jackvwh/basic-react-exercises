@@ -11,12 +11,12 @@ export default function Profile({
     <div>
       {singleLine ? (
         <p>
-          {name} - {email} - {isActive ? "Active" : "Inactive"}
+          {name}, {email}, {isActive ? "Is Active" : "Inactive"}
         </p>
       ) : (
         <>
           <p>
-            <strong>Name:</strong> {name}
+            <strong>Name:</strong> <strong>{name}</strong>
           </p>
           <p>Email: {email}</p>
           <p>Status: {isActive ? "Yes" : "No"}</p>

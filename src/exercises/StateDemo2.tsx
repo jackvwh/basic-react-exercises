@@ -11,7 +11,7 @@ export default function StateDemo2({ title }: BaseProps) {
   });
 
   function handleNameChange(e: ChangeEvent<HTMLInputElement>) {
-    setUser({ ...user, name: e.target.value });
+    setUser({ ...user, [e.target.name]: e.target.value });
   }
 
   return (
@@ -22,8 +22,15 @@ export default function StateDemo2({ title }: BaseProps) {
       </div>
       First Name:{" "}
       <input name="name" value={user.name} onChange={handleNameChange} />
-      Email: <input name="email" value={user.email} />
-      Active: <input type="checkbox" checked={user.isActive} name="isActive" />
+      Email:{" "}
+      <input name="email" value={user.email} onChange={handleNameChange} />
+      Active:{" "}
+      <input
+        type="checkbox"
+        checked={user.isActive}
+        name="isActive"
+        onChange={handleNameChange}
+      />
       <p style={{ marginTop: 15 }}> {JSON.stringify(user)} </p>
     </>
   );

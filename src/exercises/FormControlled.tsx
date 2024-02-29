@@ -1,7 +1,7 @@
 import { BaseProps } from "../types";
 import { useState } from "react";
 import { User } from "../data/data";
-import UserFormControlled from "../components/UserFormControlled";
+import UserFormControlledExtra from "../components/UserFormControlledExtra";
 
 export default function FormControlled({ title }: BaseProps) {
   const [submittedUser, setSubmittedUser] = useState<User | null>();
@@ -15,7 +15,7 @@ export default function FormControlled({ title }: BaseProps) {
       <div style={{ backgroundColor: "yellow" }}>
         <h2>{title}</h2>
         <div style={{ backgroundColor: "lightblue", margin: 20 }}>
-          <UserFormControlled
+          <UserFormControlledExtra
             title="User Form Controlled"
             onSubmitUser={onSubmitUser}
           />

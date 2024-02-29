@@ -6,7 +6,7 @@ type UserFormProps = BaseProps & {
   onSubmitUser: (user: User) => void;
 };
 
-export default function UserFormControlled({
+export default function UserFormControlledExtra({
   title,
   onSubmitUser,
 }: UserFormProps) {

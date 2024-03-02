@@ -105,7 +105,7 @@ type ButtonProps = {
   btnStyle?: string;
 };
 const Buttons = (props: ButtonProps) => {
-  const { onSelected: handleSelected, btnStyle } = props;
+  const { onSelected: handleSelected } = props;
   return (
     <>
       <button className="btn-w100" onClick={() => handleSelected("info")}>

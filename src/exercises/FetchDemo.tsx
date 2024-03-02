@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BaseProps } from "../types";
 const SERVER_URL = "https://user-data.azurewebsites.net/";
-// const SERVER_URL = "http://localhost:8000/users2";
+// const SERVER_URL = "http://localhost:8000/users";
 const DELAY = 5;
 
 type User = { id: number; name: string };

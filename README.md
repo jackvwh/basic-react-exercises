@@ -1,3 +1,5 @@
+## DEPLOYED VERSION: https://happy-bay-0d7d0b903.4.azurestaticapps.net/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
